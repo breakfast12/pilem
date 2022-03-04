@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pilem</title>
+</head>
+<body>
+    <app-bar></app-bar>
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <div id="carouselExampleFade" class="carousel slide carousel-fade mt-3" data-bs-ride="carousel">
+            <populer-carousel></populer-carousel>
+          </div>
+        </div>
+        <div class="col">
+          <div class="listupcoming">
+            <p><a href="./upcoming-movie.html" class="link-list">Upcoming Movie</a></p>
+            <upcoming-list></upcoming-list>
+          </div>
+        </div>
+      </div>
+      <div class="row mt-5">
+        <div class="col">
+          <div class="nowplaying">
+            <p>Now Playing</p>
+            <nowplaying-list></nowplaying-list>
+          </div>
+        </div>
+      </div>
+      <div class="row mt-5">
+        <div class="col">
+          <div class="listpopuler">
+            <p>Popular</p>
+            <populer-list></populer-list>
+          </div>
+        </div>
+      </div>
+    </div>
+      
+
+</body>
+</html>
