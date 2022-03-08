@@ -6,5 +6,6 @@ import "./component/app-bar.js";
 import "./component/movie-list.js";
 import "./component/upcoming-list.js";
 import "./component/populer-list.js";
+import "./component/link-upcoming.js";
 import main from './view/main.js';
 main();
