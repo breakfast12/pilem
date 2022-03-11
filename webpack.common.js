@@ -1,11 +1,21 @@
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const path = require("path");
 
+const pages = ["index", "upcoming", "now-playing", "popular", "detail"]
+
 module.exports = {
-    entry: "./src/index.js",
+    entry: pages.reduce((config, page) => {
+        config[page] = `./src/${page}.js`;
+        return config;
+    }, {}),
     output: {
         path: path.resolve(__dirname, "dist"),
-        filename: "bundle.js"
+        filename: "[name].bundle.js"
+    },
+    optimization: {
+        splitChunks: {
+            chunks: "all",
+        },
     },
     module: {
         rules: [
@@ -22,14 +32,15 @@ module.exports = {
             }
         ]
     },
-    plugins: [
-        new HtmlWebpackPlugin({
-            template: "./src/index.html",
-            filename: "index.html"
-        }),
-        new HtmlWebpackPlugin({
-            template: "./src/upcoming-movie.html",
-            filename: "upcoming-movie.html"
-        })
-    ]
-}
+    plugins: [].concat(
+        pages.map(
+            (page) => 
+            new HtmlWebpackPlugin({
+                inject: true,
+                template: `./src/${page}.html`,
+                filename: `${page}.html`,
+                chunks: [page],
+            })
+        )
+    ),
+};
