@@ -3,14 +3,9 @@ class LinkUpcoming extends HTMLElement {
         this.render();
     }
 
-    set clickEvent(event) {
-        this._clickEvent = event;
-        this.render();
-    }
-
     render() {
-        this.innerHTML = `<p><a href="./upcoming-movie.html" class="link-list" id="link-upcoming">Upcoming Movie</a></p>`;
-        this.querySelector("#link-upcoming").addEventListener("click", this._clickEvent);
+        this.innerHTML = `<p><a href="./upcoming.html" class="link-list">Upcoming Movie</a></p>`;
+    
     }
 }
 
