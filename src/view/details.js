@@ -1,3 +1,5 @@
+import "../component/detail-movie.js";
+
 const baseUrl = 'https://api.themoviedb.org/3/movie';
 const API_KEY = '36091c355a600c8eedf6c772176f7f6b';
 
