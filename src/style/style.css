@@ -61,6 +61,36 @@ a:hover {
     color: #000;
 }
 
+.tahun {
+    display: inline;
+}
+
+.sebelahTahun {
+    display: inline;
+    margin-left: 50px;
+}
+
+.posterDetail{
+    width: 300px;
+    height: 400px;
+}
+
+.genre-name{
+    display: inline-block;
+}
+
+.more-detail {
+    margin-top: 100px;
+}
+
+.casts-name {
+    margin-top: 30px;
+}
+
+.character-name {
+    color: grey;
+}
+
 @media screen and (max-width: 1440px) {
     .carousel {
         margin:0 0 -200px 150px;
@@ -438,6 +468,11 @@ a:hover {
 
     .item-title{
         font-size: 7px;
+    }
+
+    .img-cast{
+        width: 100px;
+        height: 100px;
     }
 }
 

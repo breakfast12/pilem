@@ -8,11 +8,13 @@ class NowPlayingAllItem extends HTMLElement {
         this.innerHTML = 
         `
             <div class="mt-5">
-                <div class="card card-width">
-                    <img src="https://image.tmdb.org/t/p/w500/${this._result.poster_path}" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">${this._result.title}</h5>
-                        </div>
+                <a href="./detail.html?id=${this._result.id}">
+                    <div class="card card-width">
+                        <img src="https://image.tmdb.org/t/p/w500/${this._result.poster_path}" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">${this._result.title}</h5>
+                            </div>
+                </a>
                         <ul class="list-group list-group-flush">
                             <li class="list-group-item item-title">Release date : <br> ${this._result.release_date}</li>
                         </ul>

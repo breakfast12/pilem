@@ -1,10 +1,10 @@
-class NowPlayingItem extends HTMLElement {
+class SearchMovieItem extends HTMLElement {
     set result(result) {
         this._result = result;
         this.render();
     }
 
-    render() {
+    render () {
         this.innerHTML = 
         `
             <div class="mt-5">
@@ -20,8 +20,8 @@ class NowPlayingItem extends HTMLElement {
                         </ul>
                     </div>
             </div>
-        `
+        `;
     }
 }
 
-customElements.define("nowplaying-item", NowPlayingItem);
+customElements.define("searchmovie-item", SearchMovieItem);

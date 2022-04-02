@@ -5,6 +5,7 @@ class LinkUpcoming extends HTMLElement {
 
     render() {
         this.innerHTML = `<p><a href="./upcoming.html" class="link-list">Upcoming Movie</a></p>`;
+    
     }
 }
 
