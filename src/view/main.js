@@ -14,7 +14,7 @@ const main = () => {
     const upcomingList = document.querySelector('upcoming-list');
     const nowplayingList = document.querySelector('nowplaying-list');
     const populerList   = document.querySelector('populer-list');
-    const searchElement = document.querySelector('#searchElement');
+    const searchElement = document.querySelector('app-bar');
     const searchMovieList = document.querySelector('searchmovie-list');
 
 
