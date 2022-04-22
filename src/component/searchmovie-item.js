@@ -5,6 +5,7 @@ class SearchMovieItem extends HTMLElement {
     }
 
     render () {
+        
         this.innerHTML = 
         `
             <div class="mt-5">

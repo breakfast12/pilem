@@ -11,9 +11,13 @@ const API_KEY = '36091c355a600c8eedf6c772176f7f6b';
 const main = () => {
 
     const carouselImg = document.querySelector('populer-carousel');
+    const carouselBlock = document.getElementById('carouselExampleFade');
     const upcomingList = document.querySelector('upcoming-list');
+    const linkupcomingPlaying = document.querySelector('link-upcoming');
     const nowplayingList = document.querySelector('nowplaying-list');
+    const linknowPlaying = document.querySelector('link-nowplaying');
     const populerList   = document.querySelector('populer-list');
+    const linkpopularPlaying = document.querySelector('link-popular');
     const searchElement = document.querySelector('app-bar');
     const searchMovieList = document.querySelector('searchmovie-list');
 
@@ -94,6 +98,17 @@ const main = () => {
       try {
           const result = await SearchData.searchFilm(searchElement.value);
           renderResult(result);
+          carouselImg.style.display = 'none';
+          carouselBlock.style.display = 'none';
+          upcomingList.style.display = 'none';
+          linkupcomingPlaying.style.display = 'none';
+          nowplayingList.style.display = 'none';
+          linknowPlaying.style.display = 'none';
+          populerList.style.display = 'none';
+          linkpopularPlaying.style.display = 'none';
+
+
+
       } catch (message) {
           showResponseMessage(message);
       }
